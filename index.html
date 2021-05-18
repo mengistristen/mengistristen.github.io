@@ -1,11 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Coming Soon!</h1>
-</body>
+    <link href="global.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Placeholder</h1>
+        <p>Placeholder header</p>
+      </div>
+    </header>
+    <main>
+      <div id="projects">
+        <h2 class="title">Projects / Experience</h2>
+        <section class="responsive-flex">
+          <div style="flex: 1">
+            <div class="head">
+              <h3>Ficture</h3>
+              <p>Machine Learning Map Generation</p>
+            </div>
+          </div>
+          <div class="content">
+            <img
+              class="logo"
+              src="images/ficture-logo.png"
+              alt="ficture logo"
+            />
+            <div class="links">
+              <a href="https://minecraft.net">live site</a> |
+              <a href="https://github.com/mengistristen/ficture">github</a>
+            </div>
+            <p>
+              Ficture is an app for world-builders and authors looking to find
+              inspiration in designing their worlds. Ficture uses machine
+              learning to generate unique terrain maps based on your simple
+              coastline drawings. You can use it to generate and share your own
+              maps or see other people's generated maps.
+            </p>
+            <div class="image-showcase">
+              <img
+                src="images/ficture-screenshot.png"
+                alt="screenshot of ficture website"
+              />
+              <img
+                src="images/ficture-training.png"
+                alt="image generated for use in the ficture training dataset"
+              />
+              <img
+                src="images/terraingen-screenshot.jpg"
+                alt="screenshot of ficture dataset generation tool in terminal window"
+              />
+            </div>
+          </div>
+        </section>
+        <section class="responsive-flex">
+          <div style="flex: 1">
+            <div class="head">
+              <h3>openchess</h3>
+              <p>8x8 Board Game API</p>
+            </div>
+          </div>
+          <div class="content">
+            <img
+              class="logo"
+              src="images/openchess-logo.png"
+              alt="openchess logo"
+            />
+            <div class="links">
+              <a href="https://www.openchess-api.com">live site</a> |
+              <a href="https://github.com/mengistristen/openchess">github</a>
+            </div>
+            <p>
+              openchess is an API for generating SVGs based on 8 by 8 board
+              games. It can be used by board game enthusiasts and web developers
+              to make their own apps or websites without the hassle of
+              generating the graphics for their games.
+            </p>
+            <p>
+              Implemented as a simple REST API in Node.js using Express,
+              openchess makes it easy to generate game boards, move game peices,
+              and create and swap peices to make your own board games.
+            </p>
+            <div class="image-showcase">
+              <img
+                src="images/openchess-example.svg"
+                alt="generated openchess svg"
+              />
+              <a href="/images/animated-openchess.svg" target="_blank">
+                <img
+                  src="images/animated-openchess.svg"
+                  alt="svg of peice moving animated"
+              /></a>
+            </div>
+          </div>
+        </section>
+        <section class="responsive-flex">
+          <div style="flex: 1">
+            <div class="head">
+              <h3>KTEC 89.5 FM</h3>
+              <p>Technical Director</p>
+            </div>
+          </div>
+          <div class="content">
+            <p>Some stuff</p>
+          </div>
+        </section>
+      </div>
+      <div id="education">
+        <h2 class="title">Education</h2>
+        <div class="responsive-flex">
+          <div class="ed-container">
+            <h3>Bachelor of Science, Software Engineering Technology</h3>
+            <p>Oregon Institute of Technology</p>
+          </div>
+          <div class="ed-container">
+            <h3>CSS for JS Devs</h3>
+            <p>
+              By Josh W. Comeau |
+              <a href="http://css-for-js.dev" target="_blank">site</a>
+            </p>
+          </div>
+          <div class="ed-container">
+            <h3>Testing JavaScript</h3>
+            <p>
+              By Kent C. Dodds |
+              <a href="http://testingjavascript.com" target="_blank">site</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Made by <a href="https://github.com/mengistristen">Tristen Mengis</a>
+      </p>
+      <p style="font-size: smaller; color: #555">
+        Logo design for Ficture and openchess by
+        <a href="https://github.com/JustinBoehnen">Justin Boehnen</a>
+      </p>
+    </footer>
+  </body>
 </html>

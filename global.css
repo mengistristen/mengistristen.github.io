@@ -1,0 +1,152 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Helvetica, sans-serif, sans-serif;
+}
+
+header {
+  color: white;
+  background-color: #555;
+  text-align: center;
+  border-bottom: 5px solid #333;
+  padding: 100px 0;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  padding: 10px 0;
+  max-width: 1024px;
+  margin: auto;
+}
+
+section .head {
+  position: sticky;
+  top: 0;
+  flex: 1;
+  padding: 0 10px;
+  text-align: right;
+}
+
+section > .content {
+  flex: 2;
+  background: #eee;
+  color: #333;
+  padding: 40px;
+  line-height: 1.5em;
+  position: relative;
+  overflow-x: auto;
+}
+
+footer {
+  text-align: center;
+  padding: 1em 0;
+}
+
+footer p {
+  margin: 0;
+}
+
+#contact {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e09b00;
+  border: none;
+  color: white;
+  padding: 0.5em 1.5em;
+  outline: 2px solid #e09b00;
+  transition: outline-offset 0.25s ease;
+}
+
+#education .responsive-flex div {
+  background-color: #eee;
+  padding: 1em;
+  flex: 1;
+}
+
+:is(#contact:hover, #contact:focus) {
+  outline-offset: 2px;
+}
+
+.title {
+  text-align: center;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+  margin: auto;
+  display: block;
+}
+
+.links {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+a {
+  color: #e09b00;
+  text-decoration: none;
+}
+
+:is(a:hover, a:focus) {
+  text-decoration: underline;
+}
+
+.head p {
+  font-weight: bold;
+  color: #555;
+}
+
+.image-showcase {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.image-showcase img {
+  height: 200px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  margin: 5px;
+}
+
+.responsive-flex {
+  display: flex;
+  padding: 1em;
+  gap: 1em;
+}
+
+.ed-container p {
+  font-weight: bold;
+  color: #555;
+}
+
+@media screen and (max-width: 800px) {
+  .head {
+    background-color: #eee;
+    padding: 1em !important;
+  }
+
+  .head * {
+    text-align: center;
+    margin: 0;
+  }
+
+  #projects .responsive-flex {
+    gap: 0;
+  }
+
+  .responsive-flex {
+    flex-direction: column;
+  }
+}
