@@ -132,6 +132,10 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  body {
+    font-size: smaller;
+  }
+
   .head {
     background-color: #eee;
     padding: 1em !important;
