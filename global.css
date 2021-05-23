@@ -33,7 +33,7 @@ section .head {
   position: sticky;
   top: 1em;
   flex: 1;
-  padding: 0 10px;
+  padding: 0 10px 1em 10px;
   text-align: right;
 }
 
@@ -134,6 +134,10 @@ a {
 @media screen and (max-width: 800px) {
   body {
     font-size: smaller;
+  }
+
+  section > .content {
+    padding-top: 0;
   }
 
   .head {
