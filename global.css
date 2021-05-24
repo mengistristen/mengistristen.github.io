@@ -109,9 +109,19 @@ a {
   color: #555;
 }
 
+.content h4 {
+  margin: 0;
+}
+
+.content p {
+  margin: 0.5em 0;
+  text-align: justify;
+}
+
 .image-showcase {
   overflow-x: auto;
   white-space: nowrap;
+  box-shadow: inset 0 0 3px #ccc;
 }
 
 .image-showcase img {
@@ -126,7 +136,7 @@ a {
   gap: 1em;
 }
 
-.ed-container p {
+.subheading {
   font-weight: bold;
   color: #555;
 }
