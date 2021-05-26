@@ -126,8 +126,13 @@ a {
 .subheading {
   font-weight: bold;
   color: #555;
+  margin-bottom: 0;
 }
 
+.ed-container span {
+  font-size: smaller;
+  margin-top: -10px;
+}
 @media screen and (max-width: 800px) {
   body {
     font-size: smaller;
