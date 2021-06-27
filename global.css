@@ -72,21 +72,20 @@ footer p {
 #contact form {
   display: flex;
   flex-direction: column;
-  margin: 0 10%;
   gap: 0.5em;
   align-items: center;
 }
 
 #contact input[type='submit'] {
   padding: 0.5em 1.5em;
-  background-color: #e09b00;
+  background-color: #744253;
   border: none;
   border-radius: 5px;
   color: white;
 }
 
 .container {
-  padding: 10px 0;
+  padding: 1em 2em;
   max-width: 1024px;
   margin: auto;
 }
@@ -108,8 +107,9 @@ footer p {
 }
 
 a {
-  color: #e09b00;
+  color: #744253;
   text-decoration: none;
+  font-weight: bold;
 }
 
 :is(a:hover, a:focus) {
@@ -132,7 +132,6 @@ a {
 
 .responsive-flex {
   display: flex;
-  padding: 1em;
   gap: 1em;
 }
 
@@ -145,6 +144,7 @@ a {
 .ed-container h3 {
   margin: 0;
 }
+
 .ed-container span {
   font-size: smaller;
   margin-top: -10px;
@@ -166,8 +166,8 @@ a {
 }
 
 .form-control :not(label):focus {
-  border: 2px solid #e09b00;
-  background-color: #f8ebcc;
+  border: 2px solid #744253;
+  background-color: #f3d9dc;
 }
 
 @media screen and (max-width: 800px) {
@@ -180,7 +180,7 @@ a {
   }
 
   article .content {
-    padding-top: 0;
+    padding: 0;
     border-left: none;
   }
 
@@ -204,15 +204,5 @@ a {
 
   #projects .responsive-flex {
     gap: 0;
-  }
-
-  .ed-container {
-    margin: 0 2em;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  article .showcase {
-    width: 100%;
   }
 }
