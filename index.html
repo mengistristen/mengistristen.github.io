@@ -14,9 +14,9 @@
       </div>
     </header>
     <main>
-      <div id="projects">
+      <section id="projects">
         <h2 class="title">Projects / Experience</h2>
-        <section class="responsive-flex">
+        <article class="responsive-flex container">
           <div style="flex: 1">
             <div class="head">
               <h3>Ficture</h3>
@@ -40,7 +40,12 @@
               coastline drawings. You can use it to generate and share your own
               maps or see other people's generated maps.
             </p>
-            <div class="image-showcase">
+            <img
+              class="showcase"
+              src="images/ficture-showcase.png"
+              alt="ficture screenshot"
+            />
+            <!-- <div class="image-showcase">
               <img
                 src="images/ficture-screenshot.png"
                 alt="screenshot of ficture website"
@@ -53,10 +58,10 @@
                 src="images/terraingen-screenshot.jpg"
                 alt="screenshot of ficture dataset generation tool in terminal window"
               />
-            </div>
+            </div> -->
           </div>
-        </section>
-        <section class="responsive-flex">
+        </article>
+        <article class="responsive-flex container">
           <div style="flex: 1">
             <div class="head">
               <h3>openchess</h3>
@@ -84,7 +89,12 @@
               openchess makes it easy to generate game boards, move game peices,
               and create and swap peices to make your own board games.
             </p>
-            <div class="image-showcase">
+            <img
+              class="showcase"
+              src="images/openchess-showcase.png"
+              alt="openchess screenshot"
+            />
+            <!-- <div class="image-showcase">
               <img
                 src="images/openchess-example.svg"
                 alt="generated openchess svg"
@@ -94,10 +104,10 @@
                   src="images/animated-openchess.svg"
                   alt="svg of peice moving animated"
               /></a>
-            </div>
+            </div> -->
           </div>
-        </section>
-        <section class="responsive-flex">
+        </article>
+        <article class="responsive-flex container">
           <div style="flex: 1">
             <div class="head">
               <h3>KTEC 89.5 FM</h3>
@@ -123,11 +133,11 @@
               equipment.
             </p>
           </div>
-        </section>
-      </div>
-      <div id="education">
+        </article>
+      </section>
+      <section id="education">
         <h2 class="title">Education</h2>
-        <div class="responsive-flex">
+        <div class="responsive-flex container">
           <div class="ed-container">
             <h3>Bachelor of Science, Software Engineering Technology</h3>
             <p class="subheading">Oregon Institute of Technology</p>
@@ -146,7 +156,25 @@
             </span>
           </div>
         </div>
-      </div>
+      </section>
+      <section id="contact">
+        <h2 class="title">Contact</h2>
+        <form action="" class="container">
+          <div class="form-control">
+            <label for="name">Name</label>
+            <input id="name" type="text" />
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input id="email" type="text" />
+          </div>
+          <div class="form-control">
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+          </div>
+          <input type="submit" />
+        </form>
+      </section>
     </main>
     <footer>
       <p>
@@ -157,5 +185,6 @@
         <a href="https://github.com/JustinBoehnen">Justin Boehnen</a>
       </p>
     </footer>
+    <script src="js/peg-0.10.0.min.js"></script>
   </body>
 </html>

@@ -23,13 +23,7 @@ header h1 {
   margin: 0;
 }
 
-main {
-  padding: 10px 0;
-  max-width: 1024px;
-  margin: auto;
-}
-
-section .head {
+article .head {
   position: sticky;
   top: 1em;
   flex: 1;
@@ -37,14 +31,21 @@ section .head {
   text-align: right;
 }
 
-section > .content {
+article .content {
   flex: 2;
-  background: #eee;
   color: #333;
   padding: 1em 2em;
   line-height: 1.5em;
   position: relative;
   overflow-x: auto;
+  border-left: 2px solid #ccc;
+}
+
+article .showcase {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+  border-radius: 10px;
 }
 
 footer {
@@ -62,8 +63,24 @@ footer p {
   flex: 1;
 }
 
-:is(#contact:hover, #contact:focus) {
-  outline-offset: 2px;
+#contact {
+  padding: 10px 0;
+  color: #333;
+  background-color: #eee;
+}
+
+#contact form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10%;
+  gap: 0.5em;
+  align-items: center;
+}
+
+.container {
+  padding: 10px 0;
+  max-width: 1024px;
+  margin: auto;
 }
 
 .title {
@@ -132,13 +149,38 @@ a {
   font-size: smaller;
   margin-top: -10px;
 }
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-control :not(label) {
+  width: 100%;
+  line-height: 2;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid #bbb;
+  padding: 0 0.5em;
+}
+
+.form-control :not(label):focus {
+  border: 2px solid #e09b00;
+  background-color: #f8ebcc;
+}
+
 @media screen and (max-width: 800px) {
   body {
     font-size: smaller;
   }
 
-  section > .content {
+  article .head {
+    background-color: white;
+  }
+  article .content {
     padding-top: 0;
+    border-left: none;
   }
 
   .head {
