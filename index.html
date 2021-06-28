@@ -208,6 +208,10 @@
         )
 
         if (res.status === 200) {
+          document.querySelector('#name').value = ''
+          document.querySelector('#email').value = ''
+          document.querySelector('#message').value = ''
+
           document.querySelector('#snackbar').toggleAttribute('hidden')
 
           setTimeout(() => {
