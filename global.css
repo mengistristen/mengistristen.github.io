@@ -228,6 +228,8 @@ a {
 
   article .head {
     background-color: white;
+    border-bottom: 2px solid #ccc;
+    margin-bottom: 1em;
   }
 
   article .content {
