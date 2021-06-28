@@ -5,12 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tristen Mengis</title>
     <link href="global.css" rel="stylesheet" type="text/css" />
+    <script src="https://unpkg.com/feather-icons"></script>
   </head>
   <body>
     <header>
-      <div>
-        <h1>Placeholder</h1>
-        <p>Placeholder header</p>
+      <nav>
+        <div>
+          <p>tristen@tmengis.io</p>
+          <i data-feather="mail"></i>
+        </div>
+        <div>
+          <p>mengistristen</p>
+          <i data-feather="github"></i>
+        </div>
+      </nav>
+      <div class="container">
+        <h1>Hi, I'm Tristen</h1>
+        <p>I create web experiences and APIs</p>
       </div>
     </header>
     <main>
@@ -50,20 +61,6 @@
               src="images/ficture-showcase.png"
               alt="ficture screenshot"
             />
-            <!-- <div class="image-showcase">
-              <img
-                src="images/ficture-screenshot.png"
-                alt="screenshot of ficture website"
-              />
-              <img
-                src="images/ficture-training.png"
-                alt="image generated for use in the ficture training dataset"
-              />
-              <img
-                src="images/terraingen-screenshot.jpg"
-                alt="screenshot of ficture dataset generation tool in terminal window"
-              />
-            </div> -->
           </div>
         </article>
         <article class="responsive-flex container">
@@ -91,10 +88,10 @@
               >
             </div>
             <p>
-              openchess is an API for generating SVGs based on 8 by 8 board
-              games. It can be used by board game enthusiasts and web developers
-              to make their own apps or websites without the hassle of
-              generating the graphics for their games.
+              openchess is an API for generating SVGs for 8 by 8 board games. It
+              can be used by board game enthusiasts and web developers to make
+              their own apps or websites without the hassle of generating the
+              graphics for their games.
             </p>
             <p>
               Implemented as a simple REST API in Node.js using Express,
@@ -106,17 +103,6 @@
               src="images/openchess-showcase.png"
               alt="openchess screenshot"
             />
-            <!-- <div class="image-showcase">
-              <img
-                src="images/openchess-example.svg"
-                alt="generated openchess svg"
-              />
-              <a href="/images/animated-openchess.svg" target="_blank">
-                <img
-                  src="images/animated-openchess.svg"
-                  alt="svg of peice moving animated"
-              /></a>
-            </div> -->
           </div>
         </article>
         <article class="responsive-flex container">
@@ -170,20 +156,20 @@
       </section>
       <section id="contact">
         <h2 class="title">Contact</h2>
-        <form action="" class="container">
+        <form id="contact-form" class="container" method="POST">
           <div class="form-control">
             <label for="name">Name</label>
-            <input id="name" type="text" />
+            <input id="name" name="name" type="text" />
           </div>
           <div class="form-control">
             <label for="email">Email</label>
-            <input id="email" type="text" />
+            <input id="email" name="email" type="text" />
           </div>
           <div class="form-control">
             <label for="message">Message</label>
-            <textarea id="message"></textarea>
+            <textarea id="message" name="message"></textarea>
           </div>
-          <input type="submit" />
+          <input type="submit" value="Send" />
         </form>
       </section>
     </main>
@@ -197,5 +183,15 @@
       </p>
     </footer>
     <script src="js/peg-0.10.0.min.js"></script>
+    <script>
+      const contactForm = document.querySelector('#contact-form')
+
+      feather.replace()
+      contactForm.onsubmit = (e) => {
+        e.preventDefault()
+
+        console.log(e)
+      }
+    </script>
   </body>
 </html>

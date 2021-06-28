@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-primary: #f96f5d;
+}
+
 html,
 body {
   margin: 0;
@@ -12,10 +16,33 @@ body {
 }
 
 header {
+  position: relative;
   color: white;
-  background-color: #555;
-  text-align: center;
-  padding: 100px 0;
+  background: linear-gradient(45deg, #f96f5d, #c9c9ee);
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 0.25em;
+  gap: 0.25em;
+}
+
+header nav div {
+  display: flex;
+  color: white;
+  gap: 1em;
+  align-items: center;
+}
+
+header nav div p {
+  margin: 0;
+  text-align: right;
+}
+
+header nav div svg {
+  display: block;
 }
 
 header h1 {
@@ -78,7 +105,7 @@ footer p {
 
 #contact input[type='submit'] {
   padding: 0.5em 1.5em;
-  background-color: #744253;
+  background-color: var(--color-primary);
   border: none;
   border-radius: 5px;
   color: white;
@@ -107,7 +134,7 @@ footer p {
 }
 
 a {
-  color: #744253;
+  color: var(--color-primary);
   text-decoration: none;
   font-weight: bold;
 }
@@ -166,8 +193,8 @@ a {
 }
 
 .form-control :not(label):focus {
-  border: 2px solid #744253;
-  background-color: #f3d9dc;
+  border: 2px solid var(--color-primary);
+  background-color: #fdf6f7;
 }
 
 @media screen and (max-width: 800px) {
