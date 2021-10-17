@@ -219,37 +219,71 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <script>
       const contactForm = document.querySelector('#contact-form')
+      const nameInput = document.querySelector('#name')
+      const emailInput = document.querySelector('#email')
+      const messageInput = document.querySelector('#message')
 
-      feather.replace()
-      contactForm.onsubmit = async (e) => {
-        e.preventDefault()
-        const res = await fetch(
+      const getContactValues = () => {
+        return {
+          name: nameInput.value,
+          email: emailInput.value,
+          message: messageInput.value,
+        }
+      }
+
+      const clearContactValues = () => {
+        nameInput.value = ''
+        emailInput.value = ''
+        messageInput.value = ''
+      }
+
+      const validateContactValues = () => {
+        const { name, email, message } = getContactValues()
+        const emailRegex =
+          /(?:[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])/
+
+        if (!emailRegex.test(email)) return false
+
+        return true
+      }
+
+      const sendContactRequest = async () => {
+        return await fetch(
           'https://dywrsn8bh1.execute-api.us-west-2.amazonaws.com',
           {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',
             },
-            body: JSON.stringify({
-              name: document.querySelector('#name').value,
-              email: document.querySelector('#email').value,
-              message: document.querySelector('#message').value,
-            }),
+            body: JSON.stringify(getContactValues()),
           }
         )
+      }
 
-        if (res.status === 200) {
-          document.querySelector('#name').value = ''
-          document.querySelector('#email').value = ''
-          document.querySelector('#message').value = ''
+      const showSnackbar = () => {
+        const snackbar = document.querySelector('#snackbar')
 
-          document.querySelector('#snackbar').toggleAttribute('hidden')
+        snackbar.toggleAttribute('hidden')
 
-          setTimeout(() => {
-            document.querySelector('#snackbar').toggleAttribute('hidden')
-          }, 3000)
+        setTimeout(() => {
+          snackbar.toggleAttribute('hidden')
+        }, 3000)
+      }
+
+      contactForm.onsubmit = async (e) => {
+        e.preventDefault()
+
+        if (validateContactValues()) {
+          const res = await sendContactRequest()
+
+          if (res.status === 200) {
+            clearContactValues()
+            showSnackbar()
+          }
         }
       }
+
+      feather.replace()
     </script>
   </body>
 </html>
